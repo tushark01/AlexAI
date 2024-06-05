@@ -10,6 +10,9 @@ from connector import store_user_info
 import speech_recognition as sr
 import streamlit.components.v1 as components
 
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
 import chromadb
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
